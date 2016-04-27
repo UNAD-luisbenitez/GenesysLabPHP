@@ -1,13 +1,73 @@
-html,body,.content{
+html,body{
     width: 100%;
     height: 100%;
+}
+#green-1{
+    background-color: #F1F8E9;
+}
+.row{
+    width: 100%;
 }
 .centrado-box{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.right-box{
+    display: flex;
+    /*align-items: center;*/
+    justify-content: flex-end;
+}
 
 .login{
+    background-color: white;
+    width: 450px;
+    /*estilo de form (sombras, mejoras visuales, etc)*/
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+.logo{
+    text-align: center;
+}
+
+/*Ajustar estructura de bootstrap*/
+.row,.form-horizontal .form-group{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.select-modulo{
+    text-align: center;
+}
+
+.select-modulo img{
+    width: 70px;
+}
+
+.centrado{
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 700px) {
+    .login{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 320px;
+    }
+
+    .select-modulo img{
+        width: 28px;
+    }
+
+    .logo img{
+        width: 48px;
+    }
+    .centrado-box,html{
+        height: auto;
+    }
 
 }
+
+

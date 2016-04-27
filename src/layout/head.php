@@ -5,6 +5,7 @@ $micss= isset($css) ? $css : '..css/style.css';
 ?>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="<?php echo $dircss ?>">
     <link rel="stylesheet" href="<?php echo $micss ?>">
     <title><?php echo $title ?></title>
