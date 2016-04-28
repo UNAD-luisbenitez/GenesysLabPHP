@@ -69,5 +69,21 @@ html,body{
     }
 
 }
+/*-----------------------------------------------*/
+
+/*-------------- Login adminsitrador -------------*/
+#green-2{
+    background-color: #dcedc8;
+}
+
+/*-------------- Inicio -------------------------*/
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+    flex: 1;
+}
 
 

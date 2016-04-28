@@ -84,7 +84,7 @@
             </div>
 
             <div class="form-group right-box">
-                <a href="#">Acceso SuperUsuario</a>
+                <a href="./admin">Acceso SuperUsuario</a>
             </div>
 
         </form>
