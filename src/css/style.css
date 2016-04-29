@@ -86,5 +86,22 @@ html,body{
 .content.flex {/*Permite el footer abajo siempre*/
     flex: 1;
 }
+.img-admin{
+    width: 40%;
+}
+.a-inicio:link{
+    text-decoration: none;
+}
+.jumbotron{
+    margin-top: 50px;
+}
 
+footer, .info-pie{
+    height: 50px;
+    background-color: #8bc34a;
+}
 
+.xpace{/*espaciado en la div alert warning de inicio*/
+    margin-left: 10px;
+    margin-right: 10px;
+}

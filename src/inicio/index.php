@@ -22,6 +22,13 @@ require_once ('../utilities/bd_utilities.php');
         <?php require_once ('../layout/nav.php'); ?>
         <?php require_once ('../layout/jumbotron.php'); ?>
     </header>
+    <!--Aqui se incluyen las vistas-->
+        <?php
+        require_once ('../layout/modules/admin.php');
+        //require_once ('../layout/modules/visitante.php');
+        //require_once ('../layout/modules/administrativo.php');
+        //require_once ('../layout/modules/misional.php');
+        ?>
 </main>
 
 <?php include_once ('../layout/footer.php'); ?>

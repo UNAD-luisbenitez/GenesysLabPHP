@@ -9,5 +9,7 @@
  */
 ?>
 <footer>
-    Hola! soy un pie de pagina sin editar
+    <div class="info-pie">
+        <p>Creado Por Luis Benitez, GenesysLab UNAD 2016</p>
+    </div>
 </footer>

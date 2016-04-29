@@ -34,7 +34,7 @@
                     <span class="input-group-addon" id="basic-addon1">
                         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                     </span>
-                    <input type="number" class="form-control" placeholder="Numero de cedula" aria-describedby="basic-addon1">
+                    <input type="number" class="form-control" placeholder="Numero de cedula" aria-describedby="basic-addon1" required>
                 </div>
             </div>
 
