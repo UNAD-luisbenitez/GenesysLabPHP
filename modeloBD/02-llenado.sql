@@ -21,10 +21,11 @@ INSERT INTO SystemAdmins(IdAdmin,NombreAdmin,ApellidosAdmin,PassAdmin)
 ##PassAdmin esta ecriptandose con AES, primer parametro es la contrasenia
 ##segundo parametro llave de cifrado
 
-INSERT INTO Personas(IdPersonas,NamePersonas,ApellidosPersonas,GeneroPersonas,
-ProfesionPesonas,Cargos_IdCargo,Dependencias_IdDependencia)
+INSERT INTO Personas(IdPersonas,NamePersonas,ApellidoPersonas,GeneroPersonas,
+ProfesionPersonas,Cargos_IdCargo,Dependencias_IdDependencia,Modulos_IdModulos)
   VALUES (987452368,'Ana','Sanchez','femenino','Tecnologo En Gestion Empresarial',
-  3,2),
- (18352247,'Felipe','Cardenas','masculino','Ingeniero Quimico',4,3), (34721325,'Cristina','Arias','femenino','Magister en Ciencias (Quimica)',2,3),
- (114685749,'Daniel','Arevalo','masculino','Magister en Economia',1,1),
- (114685749,'Juanito','Clavito','masculino','',0,0);
+  3,2,1),
+ (18352247,'Felipe','Cardenas','masculino','Ingeniero Quimico',4,3,2), 
+ (34721325,'Cristina','Arias','femenino','Magister en Ciencias (Quimica)',2,3,2),
+ (114685749,'Daniel','Arevalo','masculino','Magister en Economia',1,1,1),
+ (114685749,'Juanito','Clavito','masculino','',0,0,3);

@@ -24,4 +24,6 @@ $RECYCLE.BIN/
 # OSX
 # =========================
 .idea
+*.mwb
+*.bak
 
