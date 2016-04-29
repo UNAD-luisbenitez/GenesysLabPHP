@@ -76,6 +76,10 @@ html,body{
     background-color: #dcedc8;
 }
 
+#green-3{
+    background-color: #c5e1a5;
+}
+
 /*-------------- Inicio -------------------------*/
 .site {
     display: flex;
