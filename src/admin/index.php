@@ -45,6 +45,8 @@ require_once ('../utilities/bd_utilities.php');
                 </div>
             </div>
 
+            <input type="hidden" name="form" value="1">
+
             <div class="form-group centrado-box">
                 <button type="submit" class="btn btn-success">Ingresar</button>
             </div>
