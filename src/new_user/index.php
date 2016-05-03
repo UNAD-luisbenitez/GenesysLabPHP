@@ -15,6 +15,34 @@
 $title='GenesysLab:Nuevo Usuario';
 include_once('../layout/head.php');
 require_once ('../utilities/bd_utilities.php');
+
+function dependencias_op(){
+    global $mysqli;
+    $sql= "SELECT IdDependencia, NameDependencia FROM dependencias";
+    $result = $mysqli->query($sql);
+
+    while($data = $result->fetch_assoc()){?>
+        <option value="<?php echo $data['IdDependencia'] ?>"><?php echo $data['NameDependencia'] ?></option>
+  <?php  }
+    $result->free();//liberar resultados
+   //$mysqli->close();//cierro conexion
+}
+?>
+
+<?php
+
+function cargo_op(){
+    global $mysqli;
+    $sql= "SELECT IdCargo, NameCargo FROM cargos";
+    $result = $mysqli->query($sql);
+
+    while($data = $result->fetch_assoc()){?>
+        <option value="<?php echo $data['IdCargo'] ?>"><?php echo $data['NameCargo'] ?></option>
+    <?php  }
+    $result->free();//liberar resultados
+    $mysqli->close();//cierro conexion
+}
+
 ?>
 <body class="centrado-box" id="green-3">
 <div class="content"><!-- contenido aqui -->
@@ -26,7 +54,7 @@ require_once ('../utilities/bd_utilities.php');
             <h4>Genesys Lab <small>Nuevo Usuario</small></h4>
         </div>
 
-        <form class="form-horizontal" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" method="post" enctype="multipart/form-data" action="../utilities/create_user.php">
 
             <div class="form-group">
                 <div class="input-group">
@@ -81,6 +109,19 @@ require_once ('../utilities/bd_utilities.php');
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">
+                        Dependencia:
+                    </span>
+
+                    <select class="form-control" name="dependencia" required>
+                        <?php dependencias_op(); ?>
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">
                         Modulo:
                     </span>
 
@@ -96,9 +137,22 @@ require_once ('../utilities/bd_utilities.php');
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">
+                        Cargo:
+                    </span>
+
+                    <select class="form-control" name="cargo" required>
+                        <?php cargo_op(); ?>
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">
                         Profesion:
                     </span>
-                    <input type="text" class="form-control" placeholder="Tu profesion" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Tu profesion" aria-describedby="basic-addon1" name="profesion">
                 </div>
             </div>
 
@@ -113,13 +167,13 @@ require_once ('../utilities/bd_utilities.php');
             </div>
             </fieldset>
 
+            <input type="hidden" name="exe" value="1">
+
             <div class="form-group centrado-box">
                 <div class="input-group">
                     <button type="submit" class="btn btn-success">Crear Usuario</button>
                 </div>
             </div>
-
-            <input type="hidden" name="formid" value="2"> <!-- Para validar en acces-user -->
 
         </form>
     </div><!-- fin login -->

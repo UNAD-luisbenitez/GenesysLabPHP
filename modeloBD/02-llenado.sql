@@ -26,4 +26,4 @@ ProfesionPersonas,Cargos_IdCargo,Dependencias_IdDependencia,Modulos_IdModulos)
  (18352247,'Felipe','Cardenas','masculino','Ingeniero Quimico',4,3,2), 
  (34721325,'Cristina','Arias','femenino','Magister en Ciencias (Quimica)',2,3,2),
  (114685749,'Daniel','Arevalo','masculino','Magister en Economia',1,1,1),
- (114685749,'Juanito','Clavito','masculino','',0,0,3);
+ (5555555,'Juanito','Clavito','masculino','',0,0,3);
