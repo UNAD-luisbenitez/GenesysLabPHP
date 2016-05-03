@@ -9,6 +9,6 @@
  */
 ?>
 <div class="jumbotron">
-    <h1>¡Hola!, <?php echo $nameuser; ?></h1>
-    <p>Has ingresado al sistema GenesysLab como <?php echo $modulo; ?> </p>
+    <h1>¡Hola!, $username</h1>
+    <p>Has ingresado al sistema GenesysLab como $modulename </p>
 </div>
