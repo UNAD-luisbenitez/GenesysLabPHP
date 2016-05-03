@@ -17,7 +17,7 @@ INSERT INTO Dependencias(IdDependencia,NameDependencia,DescripcionDependencia)
   (0,'Ninguno', 'Sin asignar');
 
 INSERT INTO SystemAdmins(IdAdmin,NombreAdmin,ApellidosAdmin,PassAdmin)
-  VALUES (1234567890,'Luis','Benitez',AES_ENCRYPT('m1-P4ss123','Un4d.81-PwECry12:13:F8'));
+  VALUES (1234567890,'Luis','Benitez',SHA1('m1-P4ss123'));
 ##PassAdmin esta ecriptandose con AES, primer parametro es la contrasenia
 ##segundo parametro llave de cifrado
 

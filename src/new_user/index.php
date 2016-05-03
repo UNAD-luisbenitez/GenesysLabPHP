@@ -9,20 +9,10 @@
  * Pantalla para crear nuevo registro de usuario
  */
 ?>
-<?php
-/**
- * Created by PhpStorm.
- * User: Luis
- * Date: 27/04/2016
- * Time: 10:08 PM
- * UNAD 2016 Programacion de sitios web
- * GenesysLab
- */
-?>
 <!doctype html>
 <html lang="es">
 <?php
-$title='GenesysLab:Administrador';
+$title='GenesysLab:Nuevo Usuario';
 include_once('../layout/head.php');
 require_once ('../utilities/bd_utilities.php');
 ?>
@@ -125,10 +115,11 @@ require_once ('../utilities/bd_utilities.php');
 
             <div class="form-group centrado-box">
                 <div class="input-group">
-                    <button type="button" class="btn btn-default">Cancelar</button>
                     <button type="submit" class="btn btn-success">Crear Usuario</button>
                 </div>
             </div>
+
+            <input type="hidden" name="formid" value="2"> <!-- Para validar en acces-user -->
 
         </form>
     </div><!-- fin login -->
