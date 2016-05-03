@@ -7,6 +7,7 @@
  * UNAD 2016 Programacion de sitios web
  * GenesysLab
  */
+$nameuser= isset($_SESSION) ? $_SESSION['NamePersonas'] : "Invitado";
 ?>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -23,7 +24,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <!--<ul class="nav navbar-nav">
                 <li class="active"><a href="#">MiLink <span class="sr-only">(current)</span></a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Despliega <span class="caret"></span></a>
@@ -33,14 +34,14 @@
                         <li><a href="#">Separated link</a></li>
                     </ul>
                 </li>
-            </ul>
+            </ul>-->
 
             <ul class="nav navbar-nav navbar-right">
                 <li></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <img src="" alt=""> UserName <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <img src="" alt=""> <?php echo $nameuser; ?> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Cerrar Sesion</a></li>
+                        <li><a href="../utilities/logout_user.php">Cerrar Sesion</a></li> <!-- Termina la sesion -->
                     </ul>
                 </li>
             </ul>
