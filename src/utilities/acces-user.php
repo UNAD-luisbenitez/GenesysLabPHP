@@ -14,6 +14,20 @@ require_once ('./bd_utilities.php');
 /*------------------- Funciones para validar el acceso y crear la sesion*/
 $form = isset($_POST['form']) ? ($_POST['form']):'0';
 
+function registra_acceso($Personas_IdPersonas){/*permite registrar el acceso de usuarios en la BD*/
+    global $mysqli;
+    $date = date("Y-m-d h:i:s");
+    $sql="INSERT INTO historiales(Personas_IdPersonas,HoraIngreso) VALUES({$Personas_IdPersonas},'{$date}');";
+    $result = $mysqli->query($sql);
+
+    //guardo el serial del historial
+    $sql2= "SELECT SerialHistorial FROM historiales WHERE Personas_IdPersonas={$Personas_IdPersonas} AND HoraIngreso='{$date}';";
+    $result2 = $mysqli->query($sql2);
+    $data= $result2->fetch_assoc();
+    $SerialHistorial= $data['SerialHistorial'];
+    return $SerialHistorial;
+}
+
 function Name_Modulo($modulo){/*Trae el nombre de modulo directamente de la Base de datos*/
     global $mysqli;
 
@@ -46,6 +60,10 @@ function valida_user(){
             //-----Obtengo nombre de Modulo directamente de la BD
             $_SESSION['NameModulo']= Name_Modulo($modulo);
 
+            //voy a registrar el acceso
+            $Personas_IdPersonas = intval($_SESSION['IdPersonas']);
+            $_SESSION['SerialHistorial']=registra_acceso($Personas_IdPersonas);
+
             header('Location: ../inicio');
         }else{
             header('Location: ..?loginerror=1');
@@ -68,6 +86,7 @@ function valida_admin(){
         if($result->num_rows){//si encuentra datos que coinciden
             $data = $result->fetch_assoc();
 
+            $_SESSION['IdPersonas'] = $data['IdAdmin'];
             $_SESSION['NamePersonas'] = $data['NombreAdmin'];
             //Los modulos se definen a mano (no se tuvo en cuetna en el diseño de la BD)
             $_SESSION['IdModulo'] = 4;
@@ -80,6 +99,7 @@ function valida_admin(){
     }
 
 }
+
 
 /*-------------------------------- Fin funciones validacion-------------------*/
 switch ($form) {

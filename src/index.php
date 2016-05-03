@@ -101,6 +101,7 @@ if($_SESSION){//si hay una sesion activa
 <script src="js/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 
+
 <!-- Muestro ventana de error en login -->
 <?php
 if(isset($_GET['loginerror'])){

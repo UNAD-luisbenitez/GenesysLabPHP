@@ -18,8 +18,6 @@ INSERT INTO Dependencias(IdDependencia,NameDependencia,DescripcionDependencia)
 
 INSERT INTO SystemAdmins(IdAdmin,NombreAdmin,ApellidosAdmin,PassAdmin)
   VALUES (1234567890,'Luis','Benitez',SHA1('m1-P4ss123'));
-##PassAdmin esta ecriptandose con AES, primer parametro es la contrasenia
-##segundo parametro llave de cifrado
 
 INSERT INTO Personas(IdPersonas,NamePersonas,ApellidoPersonas,GeneroPersonas,
 ProfesionPersonas,Cargos_IdCargo,Dependencias_IdDependencia,Modulos_IdModulos)
