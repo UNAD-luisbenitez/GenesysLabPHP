@@ -8,6 +8,7 @@
  * GenesysLab
  */
 $nameuser= isset($_SESSION) ? $_SESSION['NamePersonas'] : "Invitado";
+$cerrarsesion= isset($close) ? $close : "../utilities/logout_user.php";
 ?>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -19,7 +20,7 @@ $nameuser= isset($_SESSION) ? $_SESSION['NamePersonas'] : "Invitado";
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="#">LOGO</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,7 +42,7 @@ $nameuser= isset($_SESSION) ? $_SESSION['NamePersonas'] : "Invitado";
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <img src="" alt=""> <?php echo $nameuser; ?> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../utilities/logout_user.php">Cerrar Sesion</a></li> <!-- Termina la sesion -->
+                        <li><a href="<?php echo $cerrarsesion ?>">Cerrar Sesion</a></li> <!-- Termina la sesion -->
                     </ul>
                 </li>
             </ul>

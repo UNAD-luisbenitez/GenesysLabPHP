@@ -10,7 +10,7 @@
 ?>
 <div class="row">
     <div class="col-sm-6 col-md-4">
-        <a href="#" class="a-inicio">
+        <a href="./informes" class="a-inicio">
             <div class="thumbnail">
                 <img src="../img/informe.svg" alt="Informes" class="img-admin">
                 <div class="caption">
@@ -22,7 +22,7 @@
     </div>
 
     <div class="col-sm-6 col-md-4">
-        <a href="#" class="a-inicio">
+        <a href="./dependencias" class="a-inicio">
             <div class="thumbnail">
                 <img src="../img/dependencia.svg" alt="Dependencias" class="img-admin">
                 <div class="caption">
@@ -35,7 +35,7 @@
 
     <div class="col-sm-6 col-md-4">
         <a href="#" class="a-inicio">
-            <div class="thumbnail">
+            <div class="thumbnail desabilita">
                 <img src="../img/users.svg" alt="Usuarios" class="img-admin">
                 <div class="caption">
                     <h3>Gestiona Usuarios</h3>
@@ -46,7 +46,7 @@
     </div>
 
     <div class="col-sm-6 col-md-4">
-        <a href="#" class="a-inicio">
+        <a target="_blank" href="../utilities/backup.php" class="a-inicio">
             <div class="thumbnail">
                 <img src="../img/bd_save.svg" alt="Backup" class="img-admin">
                 <div class="caption">

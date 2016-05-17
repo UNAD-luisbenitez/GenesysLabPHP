@@ -12,5 +12,5 @@
 define('DB_HOST','localhost');
 define('DB_DATABASE','bd_genesyslab');
 define('DB_USER','root');//usuario de MySQL
-define('DB_PASS','');//password de usuario MySQL
+define('DB_PASS','unad1234');//password de usuario MySQL
 ?>

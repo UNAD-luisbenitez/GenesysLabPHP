@@ -177,7 +177,30 @@ function cargo_op(){
 
         </form>
     </div><!-- fin login -->
+    <script src="../js/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert.css">
 
+    <?php
+    if(isset($_GET['insert'])){
+        $code_error= $_GET['insert'];
+        switch($code_error){
+        case 2:?>
+            <script>/*utilizando el plugin sweet alert*/
+                sweetAlert("Oops! :(", "No se pudo crear el usuario, puede ser que el ID ya exista", "error");
+            </script>
+        <?php break;
+        case 3: ?>
+
+            <script>
+                swal("Oops! :(", "Hay un error en los parametros, recarga y vuelve a intentar (si es necesario borra la cache de tu navegador)", "error");
+            </script>
+
+            <?php break;
+            default:
+                break;
+        }
+    }
+    ?>
 </div><!-- fin de contenido aqui -->
 </body>
 </html>

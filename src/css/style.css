@@ -109,3 +109,21 @@ footer, .info-pie{
     margin-left: 10px;
     margin-right: 10px;
 }
+
+ol.breadcrumb{
+    margin-top: 60px;
+}
+
+.my-line-form{
+    text-align: center;
+}
+
+.tabla{
+    margin-top: 20px;
+}
+th{
+   text-align: center;
+}
+.desabilita{
+    background-color: #8c8c8c;
+}

@@ -123,6 +123,12 @@ if(isset($_GET['loginerror'])){
                     });
             </script>
             <?php break;
+        case 11: ?>
+
+            <script>
+                swal("Usuario Creado", "Ingresa con tu nuevo usuario", "success");
+            </script>
+            <?php break;
         default:
             break;
     }

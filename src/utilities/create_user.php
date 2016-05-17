@@ -34,7 +34,7 @@ ProfesionPersonas,Cargos_IdCargo,Dependencias_IdDependencia,Modulos_IdModulos) V
 
         $result = $mysqli->query($sql);
         if($mysqli->affected_rows>0){
-            header('Location: ..?loginerror=11');
+            header('Location: ..?loginerror=11');//SE REGISTRO
         } else{//error (no se afecto ningun columna) puede que el id ya exista
             header('Location: ../new_user?insert=2');
         }
