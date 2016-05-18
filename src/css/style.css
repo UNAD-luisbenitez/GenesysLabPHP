@@ -127,3 +127,22 @@ th{
 .desabilita{
     background-color: #8c8c8c;
 }
+
+#picture{
+    width: 48px;
+    height: 48px;
+    border-radius: 5%;
+}
+/*ajusta foto usuario*/
+.navbar-nav > li > a{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#milogo{
+    width: 48px;
+    height: 48px;
+}
+/*ajusta el logo*/
+.navbar-brand{
+    padding: 0px 15px;
+}

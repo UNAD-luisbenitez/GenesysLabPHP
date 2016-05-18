@@ -19,18 +19,28 @@ $dependencia = isset($_POST['dependencia']) ? intval($_POST['dependencia']):'';
 $modulo = isset($_POST['modulo']) ? intval($_POST['modulo']):'';
 $profesion = isset($_POST['profesion']) ? $_POST['profesion']:'';
 $cargo = isset($_POST['cargo']) ? intval($_POST['cargo']):'vacio';
+$foto = isset($_POST['foto']) ? addslashes(file_get_contents($_FILES['foto']['tmp_name'])):0;
 
 //comrpobaciones para mejorar la consistencia de datos
 
 function recoge(){
 
     global $mysqli;
-    global $cedula,$nombre,$apellidos,$gen,$modulo,$profesion,$dependencia,$cargo;
+    global $cedula,$nombre,$apellidos,$gen,$modulo,$profesion,$dependencia,$cargo,$foto;
 
     if((!empty($cedula) && !empty($nombre)) && ($gen=="masculino" || $gen=="femenino")){
 
-        $sql="INSERT INTO personas(IdPersonas,NamePersonas,ApellidoPersonas,GeneroPersonas,
+        if(empty($foto)){//si la foto esta vacia
+
+            $sql="INSERT INTO personas(IdPersonas,NamePersonas,ApellidoPersonas,GeneroPersonas,
 ProfesionPersonas,Cargos_IdCargo,Dependencias_IdDependencia,Modulos_IdModulos) VALUES ({$cedula},'{$nombre}','{$apellidos}','{$gen}','{$profesion}',{$cargo},{$dependencia},{$modulo})";
+
+        } else{//si hay algo en la foto
+
+            $sql="INSERT INTO personas(IdPersonas,NamePersonas,ApellidoPersonas,GeneroPersonas,
+ProfesionPersonas,Cargos_IdCargo,Dependencias_IdDependencia,Modulos_IdModulos,FotoPersonas) VALUES ({$cedula},'{$nombre}','{$apellidos}','{$gen}','{$profesion}',{$cargo},{$dependencia},{$modulo},'{$foto}')";
+
+        }
 
         $result = $mysqli->query($sql);
         if($mysqli->affected_rows>0){

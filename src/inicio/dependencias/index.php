@@ -19,6 +19,8 @@ $css='../../css/style.css';
 $jqurl='../../js/jquery.js';
 $jsbs='../../js/bootstrap.min.js';
 $close= "../../utilities/logout_user.php";
+$img="../../img/user-a.png";
+$logo="../../img/lablogo.svg";
 include_once('../../layout/head.php');
 require_once ('../../utilities/bd_utilities.php');
 
@@ -74,7 +76,7 @@ function dependencias_full(){
             <form action="../../utilities/create_dependencia.php" class="form-inline" method="post">
             <tr>
                 <td>
-                    <input type="number" class="form-control" min="1" max="255" placeholder="Id" name="IdDependencia" required>
+                    <input type="number" class="form-control" min="5" max="255" placeholder="Id" name="IdDependencia" required>
                 </td>
                 <td>
                     <input type="text" class="form-control"  placeholder="Nombre" name="NameDependencia" required>
@@ -94,8 +96,29 @@ function dependencias_full(){
 
 </main>
 
-<?php include_once ('../../layout/footer.php'); ?>
+<script src="../../js/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/sweetalert.css">
+<?php
+if(isset($_GET['info'])){
+    $code_error= $_GET['info'];
+    switch($code_error){
+    case 1:?>
+        <script>/*utilizando el plugin sweet alert*/
+            swal("¡Depedencia Agregada!", "Los datos se registraron correctamente", "success");
+        </script>
+    <?php break;
+    case 2: ?>
 
+        <script>
+            sweetAlert("Oops...", "No pudimos guardar la nueva dependencia", "error");
+        </script>
+        <?php break;
+        default:
+            break;
+    }
+}
+?>
+<?php include_once ('../../layout/footer.php'); ?>
 </body>
 
 </html>

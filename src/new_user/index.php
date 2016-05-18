@@ -156,7 +156,6 @@ function cargo_op(){
                 </div>
             </div>
 
-            <fieldset disabled>
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">
@@ -165,7 +164,6 @@ function cargo_op(){
                     <input type="file" name="foto" id="fileToUpload" accept="image/*">
                 </div>
             </div>
-            </fieldset>
 
             <input type="hidden" name="exe" value="1">
 

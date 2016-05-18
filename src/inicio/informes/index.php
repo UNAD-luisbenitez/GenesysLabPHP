@@ -19,6 +19,8 @@ $css='../../css/style.css';
 $jqurl='../../js/jquery.js';
 $jsbs='../../js/bootstrap.min.js';
 $close= "../../utilities/logout_user.php";
+$img="../../img/user-a.png";
+$logo="../../img/lablogo.svg";
 include_once('../../layout/head.php');
 require_once ('../../utilities/bd_utilities.php');
 require_once ('../../utilities/info.php');

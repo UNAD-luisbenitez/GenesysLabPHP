@@ -59,6 +59,7 @@ function valida_user(){
 
             //-----Obtengo nombre de Modulo directamente de la BD
             $_SESSION['NameModulo']= Name_Modulo($modulo);
+            $_SESSION['foto'] = $data['FotoPersonas'];
 
             //voy a registrar el acceso
             $Personas_IdPersonas = intval($_SESSION['IdPersonas']);
@@ -91,6 +92,7 @@ function valida_admin(){
             //Los modulos se definen a mano (no se tuvo en cuetna en el diseño de la BD)
             $_SESSION['IdModulo'] = 4;
             $_SESSION['NameModulo']= 'SuperUsuario';
+            $_SESSION['foto'] = $data['FotoAdmin'];
 
             header('Location: ../inicio');
         } else{
